@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Random Quote Generator</title>
+</head>
+
+<body>
+  <header>
+    <h1>random quote generator</h1>
+  </header>
+  <section class="sticky">
+    <section class="quote-options">
+      <!-- Select quote type radio buttons srart -->
+      <section class="quote-type-container">
+        <h2>select quotation type</h2>
+        <label for="any-quotes">Any
+          <input name="quote-type-selection" value="any" id="any-quotes" type="radio" checked></label>
+
+        <label for="food-quotes">Food
+          <input name="quote-type-selection" value="food" id="food-quotes" type="radio"></label>
+
+        <label for="fashion-quotes">Fashion
+          <input name="quote-type-selection" value="fashion" id="fashion-quotes" type="radio"></label>
+
+        <label for="shelter-quotes">Shelter
+          <input name="quote-type-selection" value="shelter" id="shelter-quotes" type="radio"></label>
+      </section>
+      <!-- select quote type radio buttons end -->
+
+      <!-- Select quote number radio buttons srart -->
+      <section class="quote-number-container">
+        <h2>select quotation number</h2>
+        <label for="select-one">One
+          <input name="quote-number-selection" value="1" id="select-one" type="radio" checked></label>
+
+        <label for="select-two">Two
+          <input name="quote-number-selection" value="2" id="select-two" type="radio"></label>
+
+        <label for="select-three">Three
+          <input name="quote-number-selection" value="3" id="select-three" type="radio"></label>
+
+        <label for="select-four">Four
+          <input name="quote-number-selection" value="4" id="select-four" type="radio"></label>
+
+        <label for="select-five">Five
+          <input name="quote-number-selection" value="5" id="select-five" type="radio"></label>
+      </section>
+      <!-- select quote number radio buttons end -->
+    </section>
+
+    <section class="action-buttons">
+      <button id="display-quotes" type="submit">Generate</button>
+      <button id="remove-quotes">Clear</button>
+    </section>
+    <hr>
+  </section>
+
+  <!-- Generated quotes are appended here -->
+  <section id="quote-body" class="quote-container"></section>
+
+  <script src="js/random-index.js"></script>
+  <script src="js/color-lib.js"></script>
+  <script src="js/quotes-lib.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

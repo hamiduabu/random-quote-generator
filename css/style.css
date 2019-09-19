@@ -1,0 +1,185 @@
+/* General style for all elements */
+* {
+  box-sizing: border-box;
+  font-family: 'Exo', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #444;
+}
+
+/* header */
+header {
+  background-color: #999;
+  color: #fff;
+}
+
+h1,
+h2 {
+  font-family: 'Saira Stencil One', Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  margin: auto auto;
+  font-weight: 500;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #999;
+}
+
+/* Input options: container */
+.quote-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.quote-type-container {
+  margin-right: 10px;
+}
+
+.quote-number-container {
+  margin-left: 10px;
+}
+
+.quote-type-container label,
+.quote-number-container label {
+  border: 2px solid #999;
+  padding: 5px;
+}
+
+.quote-type-container section,
+.quote-number-container section {
+  border: 2px solid #eee;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Input options: labels */
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: end;
+  cursor: pointer;
+  margin: 2px auto;
+}
+
+label::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  border: 2px solid #777;
+  border-radius: 50%;
+}
+/* Input options: radio */
+input[type='radio'] {
+  display: none;
+}
+
+/* Input options: checked status */
+.checked {
+  color: #fff;
+  background-color: #999;
+  transition: 200ms;
+}
+
+.checked::after {
+  background-color: #999;
+  border: 2px solid #fff;
+  transition: 200ms;
+}
+
+.action-buttons {
+  text-align: center;
+  margin: 15px auto 0;
+}
+
+/* Input options: make options sticky */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #eee;
+}
+
+/* Buttons */
+.action-buttons button {
+  font-weight: bold;
+  height: 30px;
+  width: 75px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.action-buttons button:hover {
+  box-shadow: 0 2px 2px 0 #999;
+}
+
+.action-buttons button:active {
+  box-shadow: inset 0 0 8px 4px #eee, 0 1px 0 0 #777;
+}
+
+/* blockquotes: container */
+.quote-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* blockquotes: content */
+blockquote {
+  width: 300px;
+  max-width: 90%;
+  height: 0;
+  border-radius: 5px;
+  position: relative;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+blockquote p {
+  padding: 20px;
+}
+
+blockquote p::before {
+  content: '\201C';
+  display: block;
+  font-size: 50px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+blockquote footer {
+  padding: 15px;
+  font-style: italic;
+}
+
+blockquote footer::before {
+  content: '— ';
+}
+
+/* blockquotes: effects/basic animation */
+.hide-blockquote {
+  opacity: 0;
+  color: transparent;
+}
+
+.show-blockquote {
+  transition: all 0.5s ease;
+  opacity: 1;
+  height: 300px;
+  color: transparent;
+}
+
+.show-blockquote:hover {
+  transform: scale(1.05, 1.05);
+  transition: transform 0.2s linear;
+}
